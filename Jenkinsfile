@@ -1,5 +1,3 @@
-properties([parameters([choice(choices: ['True', 'False'], name: 'Network')])])
-
 pipeline {
     agent any
         stages {
