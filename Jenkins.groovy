@@ -1,10 +1,10 @@
-folder('INFRA')
+folder ('INFRA')
 pipelineJob('INFRA/SingleNetworkSetupJob') {
     definition {
         cpsScm {
                 scm {
                     git {
-                        remote {
+                        remote{
                             name('origin')
                             url('https://gitlab.com/ot-client/central-team/ot-orchid-international/infrastructure.git')
                             credentials('opstree')

@@ -10,11 +10,11 @@ pipeline {
             script {
                   properties([
                      parameters([
-          booleanParam(
-            defaultValue: true, 
-            description: 'Do you want to create Network', 
-            name: 'Network'
-          )
+                         booleanParam(
+                              defaultValue: true, 
+                              description: 'Do you want to create Network', 
+                              name: 'Network'
+                        )
                      ])
                   ])
             }
@@ -22,5 +22,5 @@ pipeline {
         }
         }
     }
-}
+}   
 }
