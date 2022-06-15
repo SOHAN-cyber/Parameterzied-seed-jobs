@@ -19,7 +19,7 @@ pipelineJob('INFRA/SingleNetworkSetupJob') {
         booleanParam(
              defaultValue: true, 
              description: '', 
-            name: 'BOOLEAN'
+            name: 'Network'
         )
     }
 }

@@ -1,14 +1,6 @@
 pipeline {
     agent any
-         properties([
-                     parameters([
-                         booleanParam(
-                              defaultValue: true, 
-                              description: 'Do you want to create Network', 
-                              name: 'Network'
-                        )
-                     ])
-                  ])
+properties([parameters([booleanParam(defaultValue: true, description: 'Do you want to create Network', name: 'Network')])])
     stages {
         stage {
             when {
