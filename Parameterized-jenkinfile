@@ -1,0 +1,23 @@
+properties([parameters([choice(choices: ['True', 'False'], name: 'Network')])])
+
+pipeline {
+    agent any
+        stages {
+            stage ('Network') {
+                when {
+                    expression {
+                        Network == 'True'
+                    }
+                }
+                steps {
+                     dir ('env/management/network') {
+                          sh 'terraform init'
+                          sh 'terraform plan'
+                          sh 'terraform validate'
+                          sh 'terraform plan'
+                          sh 'terraform apply'
+                        }
+                }
+            }
+        }
+}
