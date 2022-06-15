@@ -1,14 +1,6 @@
 pipeline {
     agent any
-    stages {
-        stage {
-            when {
-                expression {
-                    Network == 'True'
-                }
-        steps {
-            script {
-                  properties([
+         properties([
                      parameters([
                          booleanParam(
                               defaultValue: true, 
@@ -17,7 +9,13 @@ pipeline {
                         )
                      ])
                   ])
-            }
+    stages {
+        stage {
+            when {
+                expression {
+                    Network == 'True'
+                }
+        steps {
             echo "stage is succesfully deployed"
         }
         }
