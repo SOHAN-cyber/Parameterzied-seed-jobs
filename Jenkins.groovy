@@ -9,13 +9,13 @@ pipelineJob('INFRA/SingleNetworkSetupJob') {
                     git {
                         remote{
                             name('origin')
-                            url('https://github.com/SOHAN-cyber/Parameterzied-seed-jobs.git')
-                            credentials('github')
-                            branch('master')
+                            url('https://gitlab.com/ot-client/central-team/ot-orchid-international/infrastructure.git')
+                            credentials('opstree')
+                            branch('EKS')
                         }
                     }
                 }
-            scriptPath('Jenkinsfile')
+            scriptPath('env/management/network/Jenkinsfile')
         }
     }
 }
