@@ -15,11 +15,4 @@ pipelineJob('INFRA/SingleNetworkSetupJob') {
             scriptPath('Jenkinsfile')
         }
     }
-     parameters {
-          booleanParam(
-            defaultValue: true, 
-            description: 'Do you want to create Network', 
-            name: 'Network'
-          )
-     }
 }

@@ -7,6 +7,17 @@ pipeline {
                     Network == 'True'
                 }
         steps {
+            script {
+                  properties([
+                     parameters([
+          booleanParam(
+            defaultValue: true, 
+            description: 'Do you want to create Network', 
+            name: 'Network'
+          )
+                     ])
+                  ])
+            }
             echo "stage is succesfully deployed"
         }
         }
