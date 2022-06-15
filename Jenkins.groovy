@@ -11,7 +11,7 @@ pipelineJob('INFRA/SingleNetworkSetupJob') {
                             name('origin')
                             url('https://github.com/SOHAN-cyber/Parameterzied-seed-jobs.git')
                             credentials('github')
-                            branch('main')
+                            branch('master')
                         }
                     }
                 }
