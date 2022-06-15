@@ -1,5 +1,8 @@
 folder ('INFRA')
 pipelineJob('INFRA/SingleNetworkSetupJob') {
+    parameters {
+        choiceParam('OPTION', ['True', 'False'])
+    }
     definition {
         cpsScm {
                 scm {
