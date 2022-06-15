@@ -6,8 +6,8 @@ pipelineJob('INFRA/SingleNetworkSetupJob') {
                     git {
                         remote{
                             name('origin')
-                            url('https://gitlab.com/ot-client/central-team/ot-orchid-international/infrastructure.git')
-                            credentials('opstree')
+                            url('https://github.com/SOHAN-cyber/Parameterzied-seed-jobs.git')
+                            credentials('github')
                             branch('main')
                         }
                     }
